@@ -7,11 +7,11 @@ manage Python packages for different projects. Using a virtualenv
 allows you to avoid installing Python packages globally which could 
 break system tools or other projects.
 
-Instructions to execut script:
-`1) Before this script can be executed, cd to the directory where it exists`
-`2) Type "sudo chmod +x PyEnv.sh" into your command line (only necessary for initial launch)`
-`3) Follow up run the script, type "./PyEnv.sh"`
+Instructions to execute script:
+1. Before this script can be executed, cd to the directory where it exists
+2. Type `sudo chmod +x PyEnv.sh` into your command line (only necessary for initial launch)
+3. Follow up run the script, type `./PyEnv.sh`
 
 Notes: 
-`1) This script is designed to function specifically on a Linux System, it will not function on a Windows System`
-`2) To deactivate the virtual environment(after activating it), type "deactivate"`
+- This script is designed to function specifically on a Linux System, it will not function on a Windows System
+- To deactivate the virtual environment(after activating it), type `deactivate`
