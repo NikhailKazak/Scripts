@@ -17,4 +17,4 @@ git commit -m"${message}"
 
 echo "Pushing data to Github!"
 
-git push -u origin master
+git push -u origin main
