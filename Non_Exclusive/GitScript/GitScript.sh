@@ -7,14 +7,20 @@
 
 #######################################################################
 
+#Prompts user for their commit message
 echo "Enter your commit message"
 
+#Input for commit message
 read message
 
+#Stages changes 
 git add .
 
+#Commits the changes
 git commit -m"${message}"
 
+#Notifies user their changes are about to be pushed to remote repo
 echo "Pushing data to Github!"
 
+#Pushes changes to remote repo
 git push -u origin main

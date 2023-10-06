@@ -9,4 +9,5 @@ Instructions to execute script:
 3. In Linux, scd to the directory where the file exists, and type `sudo chmod +x GitScrip.sh` into your command line (only necessary for initial launch). To execute the script, follow up by typing `./GitScript` or `./directory1/.../GitScript.sh` into your command line.
 
 Notes: 
+- This script assumes the user already has git on their device
 - This script makes the assumption that the user has already made the initial push upstream to their branch, and is simply meant to simplify and make every subsequent change of your code to your remote branch faster.
