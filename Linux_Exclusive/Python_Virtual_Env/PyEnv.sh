@@ -1,32 +1,37 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 
-#Before this script can be executed, use 'sudo chmod +x <filename>'
+# Before running: sudo chmod +x <filename>
 
 #######################################################################
 
-#Installing dependencies
+# Installing dependencies
+sudo apt install -y python3-dev python3-pip python3.8-venv
+clear
 
-#python
-sudo apt install python3-dev -y
-echo $("clear")
+# Creating the virtual environment in the current directory
+DIR=$(mktemp -d "$(pwd)/pyenv_XXXXXXXXXXXX")
 
-#pip for python
-sudo apt install python3-pip -y
-echo $("clear")
+# Check if the directory was created successfully
+if [[ ! -d "$DIR" ]]; then
+    echo "Error: Failed to create directory."
+    exit 1
+fi
 
-#python virtual environment
-sudo apt install python3.8-venv -y
-echo $("clear")
+# Ensure the directory has correct permissions
+chmod 777 ${DIR}
 
-# Creating the virtual environment
-TEMP_DIR=$(mktemp -d /tmp/pyenv_XXXXXXXXXXXX)
-python3 -m venv ${TEMP_DIR}
+# Create the Python virtual environment
+python3 -m venv ${DIR}
 
-TEMP_VENV_BIN=${TEMP_DIR}/bin
+# Check if venv creation was successful
+if [[ ! -f "${DIR}/bin/activate" ]]; then
+    echo "Error: Virtual environment creation failed."
+    exit 1
+fi
 
-echo "Steps:"
-echo "1) cd to:" ${TEMP_VENV_BIN}
-echo "2) type: 'source activate' "
+# Activate the virtual environment
+source ${DIR}/bin/activate
 
+# To activate, type 'source ./PyEnv.sh'
 # To deactivate, type 'deactivate'
 #######################################################################
