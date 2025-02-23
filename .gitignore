@@ -1,2 +1,2 @@
-# Ignores virtual envs when pushing
+# Ignores python virtual envs when pushing
 /Linux_Exclusive/Python_Virtual_Env/pyenv_*/
